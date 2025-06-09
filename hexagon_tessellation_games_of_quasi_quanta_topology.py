@@ -205,7 +205,7 @@ hex_centers = [(i, j) for i in np.arange(domain[0], domain[1], hex_size)
 t_slider = widgets.FloatSlider(value=0, min=0, max=50, step=0.1, description="Time", continuous_update=False)
 
 @widgets.interact(t=t_slider)
-def update_visualizations(t):
+def update_visualizations_symbolic(t):
     clear_output(wait=True)
     fig, ax = plt.subplots(figsize=(10, 10))
 
@@ -267,7 +267,7 @@ t_slider = widgets.FloatSlider(value=0, min=0, max=50, step=0.1, description="Ti
 
 # Main update function for the visualization
 @widgets.interact(t=t_slider)
-def update_visualizations(t):
+def update_visualizations_normalized(t):
     clear_output(wait=True)
     fig, ax = plt.subplots(figsize=(10, 10))
 
@@ -332,7 +332,7 @@ t_slider = widgets.FloatSlider(value=0, min=0, max=50, step=0.1, description="Ti
 
 # Visualization function that applies the interpretive quasi-quanta function
 @widgets.interact(t=t_slider)
-def update_visualizations(t):
+def update_visualizations_quasi(t):
     clear_output(wait=True)
     fig, ax = plt.subplots(figsize=(10, 10))
 
